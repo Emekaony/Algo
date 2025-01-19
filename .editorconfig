@@ -1,0 +1,12 @@
+# Root configuration file
+root = true
+
+# Apply settings to all C# files
+[*.cs]
+# Use space for indentation
+indent_style = space
+# Indent size
+indent_size = 4
+
+# Place open braces on the same line
+csharp_new_line_before_open_brace = none
