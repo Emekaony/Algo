@@ -1,7 +1,10 @@
-﻿namespace basics {
+﻿using basics.models;
+
+namespace basics {
     public class Program {
         public static void Main() {
-            dataprocc.ReadBasicJson.ReadJson();
+            Person pp = new("Nnaemeka", "Onyeokoro");
+            Console.WriteLine(pp.FullName);
         }
     }
 }
