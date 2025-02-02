@@ -6,7 +6,7 @@ namespace basics.algorithms.stringAlgorithms {
             return word.All(char.IsUpper);
         }
 
-        public static string ReverseWord(string word) {
+        public static string Reverse(string word) {
             // just return the string if it's null or empty
             if (string.IsNullOrEmpty(word)) {
                 return word;
@@ -20,6 +20,16 @@ namespace basics.algorithms.stringAlgorithms {
 
             // get the string from the stringBuilder
             return sb.ToString();
+        }
+
+        // given a sentence containing multiple words, return 
+        // a sentence with each word reversed
+        public static string ReverseEachWord(string sentence) {
+            string[] stringArray = sentence.Split(" ");
+            for (int i = 0; i < stringArray.Length; i++) {
+                stringArray[i] = Reverse(stringArray[i]);
+            }
+            return string.Join(" ", stringArray);
         }
     }
 }
